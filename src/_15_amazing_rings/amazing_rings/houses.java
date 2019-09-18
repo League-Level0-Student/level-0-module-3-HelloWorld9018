@@ -18,7 +18,23 @@ public static void main(String[] args) {
 
 	for(int i=0; i<10; i++) {
 		int r = new Random().nextInt(501-100)+100;
+		System.out.println(r);
 		bob.setRandomPenColor();
+		if (r <= 250) {
+			bob.move(r);
+			bob.turn(45);
+			bob.move(30);
+			bob.turn(90);
+			bob.move(30);
+			bob.turn(45);
+			bob.move(r);
+			bob.turn(-90);
+			bob.setPenColor(Color.GREEN);
+			bob.move(30);
+			bob.turn(-90);
+	 }
+		else{
+	
 		bob.move(r);
 		bob.turn(90);
 		bob.move(30);
@@ -28,9 +44,9 @@ public static void main(String[] args) {
 		bob.setPenColor(Color.GREEN);
 		bob.move(30);
 		bob.turn(-90);
+		}
 		
 	}
-	
-	
+		
 }
 }
